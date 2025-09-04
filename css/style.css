@@ -1,0 +1,487 @@
+:root{
+    --primary-color: #515F67;       /* color principal*/
+    --secondary-color: #4BC3F2;     /* color secundario*/
+    --tertiary-color: #5C6C73;      /* color terciario*/
+    --background-color: #FFFFFF;    /* color de fondo principal */
+    --text-color: #F2F2F2;          /* color del texto principal */
+    --border-color: #5C6C73;        /* color de bordes o divisores */
+    --info-color: #2B3840;          /* color para mensajes informativos */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/*------------- SECTION HEADER-------------*/
+.intro{
+    width: 100%;
+    background-image: url("assets/Fondo.png");
+}
+.header{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 2rem;
+    opacity: 0.9;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header__menu{
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 1.6rem;
+    padding: 0; /*Quitar padding extra del UL */
+}
+
+.header__menu-item{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.header__menu-item:hover{
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+
+/*Estilos de la E del logo*/
+.header__logo--highlight{
+    color: var(--secondary-color);
+    font-weight: bolder;
+}
+
+/*------------- SECTION 1 - HERO -------------*/
+.intro__hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centrar texto */
+    gap: 1rem;
+}
+
+.hero__title{
+    color: var(--text-color);
+    background-color: var(--border-color);
+    font-size: 2.3rem;
+    padding: 1rem 2rem;
+    display: inline-block; /* Ajusta el fondo al contenido */
+    line-height: 1.4;
+}
+
+/*------------- SECTION 2 - SERVICES -------------*/
+.services{
+    width: 100%;
+    min-height: 20vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between; /* alinea con header */
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 5% 10%;
+    text-align: center;
+    box-sizing: border-box; /* evita que padding desborde */
+}
+
+.services__item{
+    flex: 1; /* cada item ocupa el mismo espacio */
+    max-width: 250px; /* evita que el texto se extienda demasiado */
+}
+
+.services__icon{
+    max-width: 60px; /*deja que cada ícono escale sin deformarse */
+    height: auto;
+    display: block; /*elimina espacios fantasmas en inline-img */
+    margin: 0 auto; /*centrar dentro del contenedor*/
+}
+
+.services__title{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-top: 1rem;
+}
+
+.services__description{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/*------------- SECTION 3 - PORTFOLIO -------------*/
+.portfolio{
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 3rem 0;
+}
+
+.portfolio__nav{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem; /* separa del grid */
+}
+
+.portfolio__heading{
+    color: var(--info-color);
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.portfolio__filter{
+    color: var(--info-color);
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    gap: 1rem;
+}
+
+.portfolio__filter-item{
+    cursor: pointer;
+}
+
+.portfolio__filter-item:hover
+.portfolio__filter-item--active{
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+
+/*------------- SECTION 3 - FIRST GRID STYLES -------------*/
+.portfolio__grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(2, 300px); */
+    gap: 10px;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 5% 15%;
+    box-sizing: border-box;
+}
+
+.portfolio__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+.portfolio__item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*------------- SECTION 4 - DEFAULT -------------*/
+
+.default{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    padding: 0 8%;
+}
+
+.default__content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+    gap: 1.5rem;
+    margin:  5rem;
+    padding: 2rem;
+}
+
+.default__title{
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.default__description{
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+.default__media{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.default__button{
+    width: 10rem;
+    text-align: center;
+    color: var(--info-color);
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+    border: 3px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.default__button:hover{
+    color: var(--text-color);
+    border: 3px solid var(--secondary-color);
+}
+
+/*------------- SECTION 5 - TWITTER -------------*/
+
+.twitter{
+    width: 100%;
+    height: 30vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.twitter__header{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.twitter__title{
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.twitter__header img{
+    width: 3rem;
+    height: 2.5rem;
+}
+
+.twitter__message{
+    width: 60%; /* ← igual que el header */
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-top: 1rem; /* ← espacio entre header y texto */
+}
+
+/*------------- SECTION 6 - ABOUT -------------*/
+.about{
+    width: 100%;
+    min-height: 70vh;
+    background-image: url("assets/bg_whoIs.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.about__container{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+/*Columna izquierda*/
+.about__text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/*Columna derecha*/
+.about__social{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*Iconos alineados*/
+.about__icons{
+    display: flex;
+    gap: 1rem;
+}
+
+.about__icon{
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/*------------- SECTION 7 - TESTIMONIALS -------------*/
+.testimonials{
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 4rem 0;
+}
+
+.testimonials__container{
+    width: 70%;
+    margin: 0 auto;
+    color: var(--info-color);
+    position: relative; /* necesario para que las comillas se posicionen bien */
+}
+
+.testimonials__title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Línea debajo del título */
+.testimonials__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 2px;
+  background: var(--info-color);
+}
+
+/* Comillas decorativas arriba a la derecha */
+.testimonials__marks {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--info-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.testimonials__description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.testimonials__autor{
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/*------------- SECTION 8 - CONTACT -------------*/
+.contact{
+    width: 100%;
+    min-height: 70vh;
+    background-image: url("assets/bg_contact.png");
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* formulario | info */
+    gap: 4rem;
+    align-items: start;
+    padding: 5% 10%;
+}
+
+/*Formulario*/
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact__label{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.contact__input,
+.contact__textarea{
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.contact__textarea{
+    width: 100%;
+    height: 22rem;
+    resize: none;
+    padding: 1rem;
+    border: 2px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    box-sizing: border-box;
+}
+
+.contact__button{
+    width: 15rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.contact__button:hover{
+    background-color: var(--info-color);
+}
+
+/* Información lateral */
+.contact__info{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    align-self: start;
+}
+
+.contact__address{
+    font-weight: bold;
+}
