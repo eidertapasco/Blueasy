@@ -1,0 +1,147 @@
+@media(max-width: 480px){
+    /*HEADER*/
+    .header{
+        height: auto;
+        padding: 1rem 2rem;
+    }
+        
+    .header__nav{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header__menu{
+        width: 100%;
+        flex-direction: row;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /*HERO*/
+    .hero__title span{
+        font-size: 1.6rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    /* .intro__hero{
+        height: auto;
+        padding: 4rem 1rem;
+    } */
+
+    /*SERVICES*/
+    .services{
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 2rem;
+    }
+
+    .services__item{
+        max-width: 100%;
+    }
+
+    /*PORTFOLIO*/
+    .portfolio__nav{ 
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 2rem;
+    }
+
+    .portfolio__filter{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portfolio__grid{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 2rem;
+    }
+
+    /*DEFAULT*/
+    .default{
+        /* width: 100%; */
+        /* min-height: 100dvh; */
+        flex-direction: column;
+        padding: 3rem 2rem;
+        gap: 2rem;
+        /* align-items: center; */
+    }
+
+    .default__content,
+    .default__media{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    /* .default__media img{
+        align-items: center;
+        width: 90%;
+    } */
+
+    .default__button{
+        margin: 0 auto;
+    }
+
+    /*TWITTER*/
+    .twwiter__header,
+    .twitter__message{
+        width: 90%;
+        text-align: center;
+    }
+
+    .twitter__header{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /*ABOUT*/
+    .about__container{
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    
+
+    /*  */
+
+    /*TESTIMONIALS*/
+    .testimonial__container{
+        width: 90%;
+        font-size: 1.4rem;
+    }
+
+    /*CONTACT*/
+    .contact{
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+    }
+
+    .contact__info{
+        order: -1; /*Info arriba, formulario abajo*/
+        text-align: center;
+        padding: 0;
+    }
+
+    .contact__button{
+        width: 100%;
+    }
+
+    /*FOOTER*/
+    .footer__nav{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer__menu{
+        flex-direction: row;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .footer__copyright{
+        text-align: center;
+        width: 100%;
+    }
+
+}
