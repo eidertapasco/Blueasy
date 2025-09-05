@@ -1,70 +1,163 @@
 @media(max-width: 768px){
     /*HEADER*/
+    .header {
+        padding: 1.5rem 5%;
+        height: auto;
+    }
+
     .header__nav {
         flex-direction: column;
         align-items: center;
-    }
-
-    .header {
-        padding: 1.5rem;
+        gap: 1.5rem;
     }
 
     .header__menu {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
         width: 100%;
-        font-size: 1.4rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        gap: 1.5rem;
+        /* align-items: center; */
+        
+        /* font-size: 1.4rem; */
     }
 
-    .header__menu-item{
+    /* .header__menu-item{
         display: block;
         padding: 0.5rem 0;
+    } */
+
+    /*HERO*/
+    .hero__title{
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
     }
 
-    .hero__title {
+    .hero__title span{
+        display: inline-block;
+        margin: 0.5rem 3rem;
+        padding: 1rem 2.5rem;
         font-size: 2rem;
+        text-align: center;
+        line-height: 1.4;
     }
 
-    .intro__hero {
+    /* .intro__hero {
         height: auto;
         padding: 6rem 2rem;
-    }
+    } */
 
     /* SERVICES */
     .services{
         flex-wrap: wrap;
         justify-content: center;
+        gap: 2rem;
+        padding: 4rem 5%;
     }
 
     .services__item{
-        flex: 1 1 45%;
+        max-width: 45%;
+        /* flex: 1 1 45%; */
     }
 
     /*PORTFOLIO*/
+    .portfolio__nav{
+        width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .portfolio__filter{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
     .portfolio__grid{
-        grid-template-columns: repeat(2, 1fr);
-        padding: 5% 10%;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 5%;
     }
 
     /*DEFAULT*/
     .default{
         flex-direction: column;
+        padding: 4rem 5%;
+        gap: 3rem;
     }
     
     .default__content,
     .default__media{
         width: 100%;
+        margin: 0;
+        padding: 0;
+        /* text-align: center; */
+    }
+
+    .default__media img{
+        max-width: 80%;
+    }
+
+    /*TWITTER*/
+    .twitter__header,
+    .twitter__message {
+        width: 80%;
         text-align: center;
+    }
+
+    .twitter__header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 
     /*ABOUT*/
     .about__container {
         grid-template-columns: 1fr;
+        width: 90%;
     }
 
     /*CONTACT*/
     .contact {
         grid-template-columns: 1fr;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials__container {
+        width: 90%;
+        font-size: 1.6rem;
+    }
+
+    /* CONTACT */
+    .contact {
+        grid-template-columns: 1fr;
+        padding: 4rem 5%;
+    }
+
+    .contact__info {
+        order: -1; /* info arriba, form abajo */
+        text-align: center;
+        padding: 0;
+    }
+
+    .contact__button {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    .footer__nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer__menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer__copyright {
+        text-align: center;
+        width: 100%;
     }
 }

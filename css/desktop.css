@@ -1,0 +1,91 @@
+@media (min-width: 921px) and (max-width: 1279px) {
+    /* HEADER */
+    .header__nav {
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+
+    .header__menu {
+        width: auto;
+        gap: 2rem;
+    }
+
+    .header__logo {
+        font-size: 2.2rem;
+    }
+
+    /* HERO */
+    .hero__title span {
+        font-size: 3rem;
+        margin: 0.5rem 2rem;
+        padding: 1rem 2rem;
+    }
+
+    /* SERVICES */
+    .services {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    /*DEFAULT*/
+    .default {
+        flex-direction: row;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .default__content {
+        width: 50%;
+        margin: 2rem;
+        padding: 1rem;
+    }
+
+    .default__media{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .default__video {
+        max-width: 90%;
+        height: auto;
+    }
+
+    /* ABOUT */
+    .about {
+        min-height: 60vh; /* reduce altura excesiva */
+        padding: 5rem 0;
+    }
+
+    .about__container {
+        width: 85%;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    /* CONTACT */
+    .contact {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: 3rem;
+        padding: 5%;
+    }
+
+    .contact__form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        align-items: start;
+    }
+
+    .contact__field--full {
+        grid-column: 1 / -1;
+    }
+
+    /* Ajustar textarea para que no quede separado feo */
+    .contact__textarea {
+        min-height: 20rem;
+    }
+
+}
